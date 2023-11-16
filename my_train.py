@@ -4,7 +4,7 @@ from ultralytics import YOLO
 model = YOLO('/root/code/ultralytics/cfg/models/v8/myyolov8.yaml')
 
 # Load a pretrained YOLO model (recommended for training)
-model = YOLO('yolov8n.pt')
+model = YOLO('/root/code/yolov8n.pt')
 
 if __name__ == '__main__':
     # Use the model
