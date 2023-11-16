@@ -8,6 +8,6 @@ model = YOLO('yolov8n.pt')
 
 if __name__ == '__main__':
     # Use the model
-    results = model.train(data='/root/code/ultralytics/cfg/datasets/mycoco128.yaml',workers=4, epochs=300,batch=32,optimizer='Adam')  # train the model
+    results = model.train(data='/root/code/ultralytics/cfg/datasets/mycoco128.yaml',workers=1, epochs=300,batch=32,optimizer='Adam')  # train the model
     results = model.val()  # evaluate model performance on the validation set
     success = YOLO("yolov8n.pt").export(format="onnx")  # export a model to ONNX format
